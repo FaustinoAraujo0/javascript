@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruh</title>
+</head>
+<body>
+    <h1>Teste de velocidade</h1>
+    <div>
+        <label for="txtvel">Velocidade do carro:</label>
+        <input type="number" name="textvel" id="txtvel">
+    </div>
+    <div>
+        <input type="button" value="verificar" onclick="verificar()">
+    </div>
+    <div id="resultado"></div>
+
+    <script>
+        function verificar() {
+            var vel = Number(document.querySelector("#txtvel").value);
+            var res = document.querySelector("#resultado");
+            if (vel > 60) {
+                res.innerHTML = "Você foi multado por excesso de velocidade!"
+
+            } else {
+                res.innerHTML = "Você está dentro do limite de velocidade."
+            }
+        }
+    </script>
+</body>
+</html>

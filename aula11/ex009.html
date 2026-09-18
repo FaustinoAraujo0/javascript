@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+
+    <div>
+        <label for="inacio">Informe sua nacionalidade:</label>
+        <input type="text" name="nacionalidade" id="inacio" required>
+    </div>
+    <div>
+        <input type="button" value="verificar" onclick="verificar()">
+    </div>
+    <div id="res">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var nac = document.getElementById("inacio").value
+            var res = document.querySelector("#res")
+
+            if (nac == "angola" || nac == "Angola") {
+                res.innerHTML = `Você é <strong>Angolano(a)</strong>`
+            } else if (nac == "") {
+                res.innerHTML = `Você não informou sua nacionalidade, Por favor identifique-se!`
+            } else {
+                res.innerHTML = `Você é <strong>Estrangeiro(a)</strong>`
+            }
+        }
+
+    </script>
+</body>
+</html>
